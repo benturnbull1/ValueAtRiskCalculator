@@ -7,18 +7,19 @@ import java.util.List;
 
 public class VarCalculator {
 
-	public double valueAtRiskForSingleTrade(Trade trade, double confidenceLevel, double investment) {
+	public double valueAtRiskForSingleTrade(Trade trade, double confidenceLevel, double purchaseValue) {
 
 		List<Double> returns = new ArrayList<>(trade.getReturns());
-
+		
 		Collections.sort(returns);
 		
 		double returnIndex = Math.ceil((1 - confidenceLevel) * returns.size());
 
-		double valueAtRisk = returns.get((int) returnIndex - 1) * investment;
+		double valueAtRisk = returns.get((int) returnIndex - 1) * purchaseValue;
 
 		double roundedValueAtRisk = Math.round((valueAtRisk * 100) / 100);
-
+		
+		//Output multiplied by -1* to return a positive value at risk
 		return -1*roundedValueAtRisk;
 	}
 
@@ -41,7 +42,8 @@ public class VarCalculator {
 		double valueAtRisk = weightedReturns[(int) returnIndex-1] * investment;
 		
 		double roundedValueAtRisk = Math.round((valueAtRisk * 100) / 100);
-
+		
+		//Output multiplied by -1* to return a positive value at risk
 		return -1*roundedValueAtRisk;
 	}
 
