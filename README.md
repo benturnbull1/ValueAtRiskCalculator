@@ -24,6 +24,7 @@ Outputs the VAR for a single trade/ VAR at portfolio level.
 
 == How to use ==
 
-Clone the project from git.
-Import maven project in IDE (See online guide).
-In Runner.java file, adapt historical returns and Trades as necessary. Hit run to obtain calculations.
+- Clone the project from git.
+- Import maven project in IDE (See online guide).
+- In Runner.java file, adapt historical returns, trades and portfolio as desired. 
+- Hit run to obtain calculations.
