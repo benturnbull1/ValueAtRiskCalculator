@@ -15,10 +15,12 @@ User edits/creates a Trade object containing the above List and a weight
 
 
 User specifies a desired confidence level, expressed as a decimal. 
+
+
 User specifies the value of the trade/ portfolio.
 
 Outputs the VAR for a single trade/ VAR at portfolio level.
--Output is displayed as a positive value for convenience. 
+-  output is displayed as a positive value for convenience. 
 
 == How to use ==
 
